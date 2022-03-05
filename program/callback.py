@@ -148,8 +148,8 @@ __""",
     )
     
     
-@Client.on_callback_query(filters.regex("vbadmin"))
-async def vbadmin(_, query: CallbackQuery):
+@Client.on_callback_query(filters.regex("vbbasic"))
+async def vbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""ها هي اوامر الاعضاء✨ 
 
