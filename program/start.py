@@ -133,6 +133,20 @@ async def aping_pong(client: Client, message: Message):
     await m_reply.edit_text("ها هي الأوامر الأساسية: \n» .شغل »「اسم الأغنية / رابط」تشغيل الصوت mp3 في المكالمة \n» .فيد »「اسم / رابط الفيديو」 تشغيل الفيديو داخل المكالمه \n» .تشغيل صوت »「رابط 」تشغيل صوت \n» .مباشر +「رابط」» تشغيل فيديو مباشر من اليوتيوب \n» .اسكت » لايقاف التشغيل \n» .كمل » استئناف التشغيل \n» .تخطي » تخطي الئ التالي \n» مؤقتا » ايقاف التشغيل موقتا. \n» .كتم » لكتم البوت \n» .احجي » لرفع الكتم عن البوت \n» .بحث + 「اسم」» للبحث علي الاغاني \nمطور السورس فينوم @V_O_O")
 
 
+    
+@Client.on_message(command(["المطور", f"mping@{BOT_USERNAME}"]) & ~filters.edited)
+
+async def mping_pong(client: Client, message: Message):
+
+    start = time()
+
+    m_reply = await message.reply_text("جار التحميل....")
+
+    delta_mping = time() - start
+
+    await m_reply.edit_text("اهلا بك عزيزي \nمطور السورس @V_O_O")
+    
+    
 @Client.on_message(command(["معلومات", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
 async def get_uptime(client: Client, message: Message):
     current_time = datetime.utcnow()
