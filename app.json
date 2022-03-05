@@ -44,11 +44,6 @@
             "description": "قم بوضع ايدي المطور الاساسي",
             "required": true
         },
-        "UPDATES_CHANNEL": {
-            "description": "ضع هنا يوزر قناتك بدون علامة @",
-            "required": true,
-            "value": "BANDA1M"
-        },
         "OWNER_NAME": {
             "description": "ضع هنا يوزر المطور بدون علامة @",
             "required": true,
