@@ -124,8 +124,8 @@ __""",
     )
 
 
-@Client.on_callback_query(filters.regex("cbadmin"))
-async def cbadmin(_, query: CallbackQuery):
+@Client.on_callback_query(filters.regex("ebbasic"))
+async def ebbasic(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""🏮 مرحبا بك هذا هي اوامر المشرفين:
 
