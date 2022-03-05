@@ -116,7 +116,7 @@ async def pause(client, m: Message):
         try:
             await call_py.pause_stream(chat_id)
             await m.reply(
-                "⏸ **تم ايقاف المسار موقتآ**\n\n• **لٲستئناف البث استخدم**\n»  .كمل الامر."
+                "⏸ **تم ايقاف المسار موقتآ**\n\n• **لٲستئناف البث استخدم**\n» .كمل الامر."
             )
         except Exception as e:
             await m.reply(f"🚫 **خطاء:**\n\n`{e}`")
@@ -125,7 +125,7 @@ async def pause(client, m: Message):
 
 
 @Client.on_message(
-    command(["", f"resume@{BOT_USERNAME}", "vresume"]) & other_filters
+    command(["كمل", f"resume@{BOT_USERNAME}", "vresume"]) & other_filters
 )
 @authorized_users_only
 async def resume(client, m: Message):
@@ -134,7 +134,7 @@ async def resume(client, m: Message):
         try:
             await call_py.resume_stream(chat_id)
             await m.reply(
-                "▶️ **تم استئناف المسار**\n\n• **لايقاف البث موقتآ استخدم**\n» /pause الامر"
+                "▶️ **تم استئناف المسار**\n\n• **لايقاف البث موقتآ استخدم**\n» .مؤقتا الامر"
             )
         except Exception as e:
             await m.reply(f"🚫 **خطاء:**\n\n`{e}`")
@@ -143,7 +143,7 @@ async def resume(client, m: Message):
 
 
 @Client.on_message(
-    command(["", f"mute@{BOT_USERNAME}", "vmute"]) & other_filters
+    command(["كتم", f"mute@{BOT_USERNAME}", "vmute"]) & other_filters
 )
 @authorized_users_only
 async def mute(client, m: Message):
@@ -152,7 +152,7 @@ async def mute(client, m: Message):
         try:
             await call_py.mute_stream(chat_id)
             await m.reply(
-                "🔇 **تم كتم الصوت**\n\n• **لرفع الكتم استخدم**\n» /unmute الامر"
+                "🔇 **تم كتم الصوت**\n\n• **لرفع الكتم استخدم**\n» .احجي الامر"
             )
         except Exception as e:
             await m.reply(f"🚫 **خطاء:**\n\n`{e}`")
@@ -161,7 +161,7 @@ async def mute(client, m: Message):
 
 
 @Client.on_message(
-    command(["", f"unmute@{BOT_USERNAME}", "vunmute"]) & other_filters
+    command(["احجي", f"unmute@{BOT_USERNAME}", "vunmute"]) & other_filters
 )
 @authorized_users_only
 async def unmute(client, m: Message):
@@ -170,7 +170,7 @@ async def unmute(client, m: Message):
         try:
             await call_py.unmute_stream(chat_id)
             await m.reply(
-                "🔊 **تم رفع الكتم**\n\n• **لكتم الصوت استخدم**\n» /mute الامر"
+                "🔊 **تم رفع الكتم**\n\n• **لكتم الصوت استخدم**\n» .كتم الامر"
             )
         except Exception as e:
             await m.reply(f"🚫 **خطاء:**\n\n`{e}`")
@@ -278,7 +278,7 @@ async def cbunmute(_, query: CallbackQuery):
 
 
 @Client.on_message(
-    command(["", f"volume@{BOT_USERNAME}", "vol"]) & other_filters
+    command(["ضبط", f"volume@{BOT_USERNAME}", "vol"]) & other_filters
 )
 @authorized_users_only
 async def change_volume(client, m: Message):
